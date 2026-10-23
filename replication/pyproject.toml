@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "podcast_ecog"
+version = "0.1.0"
+description = "Loaders and analysis utilities for the Hasson-lab 'Podcast' ECoG dataset (OpenNeuro ds005574)"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "h5py", "mne", "mne-bids", "scipy", "scikit-learn", "matplotlib", "nilearn"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

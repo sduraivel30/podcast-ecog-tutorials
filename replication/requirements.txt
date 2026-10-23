@@ -1,0 +1,20 @@
+numpy
+pandas
+h5py
+scipy
+scikit-learn
+matplotlib
+nilearn
+statsmodels
+mne
+mne-bids
+himalaya
+jupyter
+pytest
+plotly
+nltk
+pyyaml
+torch          # the paper encoding code imports it (CPU is enough; uses CUDA when present)
+transformers   # tutorial 03 (GPT-2 features)
+accelerate
+spacy          # tutorial 03; also run: python -m spacy download en_core_web_sm

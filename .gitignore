@@ -1,2 +1,13 @@
 *.fif
 *.hdf5
+
+# replication
+replication/data/
+replication/.venv/
+replication/logs/
+replication/.env.server
+notebooks_patched/
+executed/
+__pycache__/
+*.egg-info/
+.DS_Store
