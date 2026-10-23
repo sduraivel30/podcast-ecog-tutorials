@@ -21,7 +21,7 @@ print(f"{len(el)} electrodes, {el.subject.nunique()} subjects; LanA at electrode
 # 1) slices: LanA over the template + electrodes within 4 mm of each slice
 fig = plt.figure(figsize=(11, 3.6)); 
 for k, (mode, cut, lab) in enumerate((("x", -54, "x = -54"), ("y", -20, "y = -20"), ("z", 6, "z = 6"))):
-    ax = fig.add_subplot(1, 3, k + 1); d = plotting.plot_anat(t1, display_mode=mode, cut_coords=[cut], axes=ax, annotate=False, draw_cross=False, title=lab)
+    ax = fig.add_subplot(1, 3, k + 1); d = plotting.plot_anat(t1, display_mode=mode, cut_coords=[cut], axes=ax, annotate=False, draw_cross=False, colorbar=False, title=lab)
     d.add_overlay(lana, cmap="YlOrRd", threshold=0.05, vmin=0.05, vmax=0.5, alpha=0.85)
     ax_i = "xyz".index(mode); near = np.abs(xyz[:, ax_i] - cut) <= 4
     if near.any(): d.add_markers(xyz[near], marker_color="#1f77b4", marker_size=8)
